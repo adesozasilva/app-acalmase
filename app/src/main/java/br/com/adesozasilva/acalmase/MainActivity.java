@@ -1,5 +1,6 @@
 package br.com.adesozasilva.acalmase;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,9 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,19 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        linearLayout = (LinearLayout) findViewById(R.id.tips);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+            public void onClick(View view) {
+                openTipsActivity();
+            }
+        });
+    }
+
+    private void openTipsActivity() {
+        Intent intent = new Intent(this, TipsActivity.class);
+        startActivity(intent);
     }
 
     @Override

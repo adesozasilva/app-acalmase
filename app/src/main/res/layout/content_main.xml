@@ -9,7 +9,6 @@
     tools:showIn="@layout/app_bar_main">
 
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="116dp"
@@ -23,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/heart_solid" />
+        app:srcCompat="@drawable/robot" />
 
     <TextView
         android:id="@+id/textView4"
@@ -33,7 +32,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Eu posso ajudar você?"
+        android:text="Oi, eu posso ajudar?"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.605"
@@ -49,7 +48,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Você está passando por um momento díficil, eu gostaria de ajudar você."
+        android:text="Parece que você está passando por um momento díficil, eu gostaria te ajudar."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +58,7 @@
     #Content
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/tips"
         android:layout_width="0dp"
         android:layout_height="115dp"
         android:layout_marginTop="20dp"
@@ -70,8 +69,8 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="90dp"
-            android:layout_height="78dp"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
             app:srcCompat="@drawable/maca" />
 
         <TextView
@@ -91,12 +90,12 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/tips">
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="90dp"
-            android:layout_height="78dp"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
             app:srcCompat="@drawable/chatbot" />
 
         <TextView
@@ -123,8 +122,8 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="90dp"
-            android:layout_height="78dp"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
             app:srcCompat="@drawable/doctor" />
 
         <TextView
