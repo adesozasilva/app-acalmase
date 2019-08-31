@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase;
+package br.com.adesozasilva.acalmase.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,10 +23,13 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.LinearLayout;
 
+import br.com.adesozasilva.acalmase.R;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private LinearLayout linearLayout;
+    private LinearLayout tips;
+    private LinearLayout chatbot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,17 +53,32 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        linearLayout = (LinearLayout) findViewById(R.id.tips);
-        linearLayout.setOnClickListener(new View.OnClickListener() {
-                @Override
+        tips = (LinearLayout) findViewById(R.id.tips);
+        chatbot = (LinearLayout) findViewById(R.id.chatbot);
+
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
                 openTipsActivity();
             }
         });
+
+        chatbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openChatBotActivity();
+            }
+        });
+
     }
 
     private void openTipsActivity() {
         Intent intent = new Intent(this, TipsActivity.class);
+        startActivity(intent);
+    }
+
+    private void openChatBotActivity() {
+        Intent intent = new Intent(this, ChatBotActivity.class);
         startActivity(intent);
     }
 

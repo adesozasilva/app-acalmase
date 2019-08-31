@@ -1,10 +1,12 @@
-package br.com.adesozasilva.acalmase;
+package br.com.adesozasilva.acalmase.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import br.com.adesozasilva.acalmase.R;
 
 public class TipsActivity extends AppCompatActivity {
 
