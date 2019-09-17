@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase.activity;
+package br.com.adesozasilva.oiansiedade.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.LinearLayout;
 
-import br.com.adesozasilva.acalmase.R;
+import br.com.adesozasilva.oiansiedade.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Oi Ansiedade");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);

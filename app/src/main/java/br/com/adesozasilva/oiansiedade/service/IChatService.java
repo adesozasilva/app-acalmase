@@ -1,6 +1,6 @@
-package br.com.adesozasilva.acalmase.service;
+package br.com.adesozasilva.oiansiedade.service;
 
-import br.com.adesozasilva.acalmase.model.Message;
+import br.com.adesozasilva.oiansiedade.model.Message;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase.adapter;
+package br.com.adesozasilva.oiansiedade.adapter;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -12,8 +12,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import br.com.adesozasilva.acalmase.R;
-import br.com.adesozasilva.acalmase.model.Message;
+import br.com.adesozasilva.oiansiedade.R;
+import br.com.adesozasilva.oiansiedade.model.Message;
+import br.com.adesozasilva.oiansiedade.model.User;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -56,15 +57,16 @@ public class AdapterMessage extends BaseAdapter {
         ButterKnife.bind(this, linha);
 
         Message mensagem = getItem(i);
+        User user = getItem(i).getSender();
 
         int iconMessage = R.drawable.eu;
 
-        if (clientId != mensagem.getId()) {
+        if (clientId != user.getId()) {
             linha.setBackgroundColor(Color.CYAN);
             iconMessage = R.drawable.icons_robotic;
         }
 
-        texto.setText(mensagem.getText());
+        texto.setText(mensagem.getContent());
 
         Picasso.with(activity)
                 .load(iconMessage)

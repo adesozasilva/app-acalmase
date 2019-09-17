@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase.callback;
+package br.com.adesozasilva.oiansiedade.callback;
 
 import retrofit2.Call;
 import retrofit2.Callback;

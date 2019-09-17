@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase;
+package br.com.adesozasilva.oiansiedade;
 
 import org.junit.Test;
 

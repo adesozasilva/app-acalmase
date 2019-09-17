@@ -1,4 +1,4 @@
-package br.com.adesozasilva.acalmase.activity;
+package br.com.adesozasilva.oiansiedade.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +13,12 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.adesozasilva.acalmase.R;
-import br.com.adesozasilva.acalmase.adapter.AdapterMessage;
-import br.com.adesozasilva.acalmase.callback.EnviarMensagemCallback;
-import br.com.adesozasilva.acalmase.callback.OuvirMensagensCallback;
-import br.com.adesozasilva.acalmase.model.Message;
-import br.com.adesozasilva.acalmase.service.IChatService;
+import br.com.adesozasilva.oiansiedade.R;
+import br.com.adesozasilva.oiansiedade.adapter.AdapterMessage;
+import br.com.adesozasilva.oiansiedade.callback.EnviarMensagemCallback;
+import br.com.adesozasilva.oiansiedade.callback.OuvirMensagensCallback;
+import br.com.adesozasilva.oiansiedade.model.Message;
+import br.com.adesozasilva.oiansiedade.service.IChatService;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -36,6 +36,7 @@ public class ChatBotActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_bot);
+        setTitle("Chat");
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -51,7 +52,7 @@ public class ChatBotActivity extends AppCompatActivity {
 
         Retrofit retrofit = new Retrofit.Builder()
                 // Altere para o seu IP
-                .baseUrl("http://172.16.70.211:8080/")
+                .baseUrl("http://172.16.70.211:8080/messages")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
